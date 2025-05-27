@@ -12,6 +12,7 @@ using namespace std;
 signed main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
+    cout<<"After last line press enter and CNTRL + D to indicate end of paragraph"<<endl;
     cout<<"Enter the string to be sorted: "<<endl;
     string s = "";
     string temp;
@@ -24,7 +25,6 @@ signed main() {
     {
         if(s[i]==' ')s.erase(s.begin()+i--);
     }
-    cout<<s<<endl;
     int v[26] = {0};
     //bool which tells us if characters other than letters are present
     bool other = false;
@@ -48,4 +48,6 @@ signed main() {
             cout<<(char)('a'+i);
         }
     }
+    cout<<endl;
+
 }

@@ -15,9 +15,9 @@ signed main() {
     cout<<"Enter the string to be sorted: "<<endl;
     string s = "";
     string temp;
-    while(getline(cin, s))
+    while(getline(cin, temp))
     {
-        temp+=s;
+        s+=temp;
     }
     //removing spaces
     for(int i = 0; i < s.size();i++)
@@ -32,8 +32,7 @@ signed main() {
     {
         if(!(s[i]>=65 && s[i]<=90)&&!(s[i]>=97&&s[i]<=122))
         {
-            other = true;
-            break;
+            continue;
         }
         if(s[i]>=65 && s[i]<=90)s[i]+=32;
         v[s[i] -'a']++;

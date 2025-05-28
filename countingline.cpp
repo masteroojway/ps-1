@@ -44,14 +44,14 @@ signed main() {
             // Start of block
             if (!quote && i + 1 < s.size() && s[i] == '/' && s[i + 1] == '*') {
                 block = true;
-                i++;
+                i++; //skip '*'
                 continue;
             }
 
             // End of block comment
             if (!quote && block && i + 1 < s.size() && s[i] == '*' && s[i + 1] == '/') {
                 block = false;
-                i++;
+                i++; //skip '/'
                 continue;
             }
             // Skip anything inside block comment if */ is not found
@@ -65,7 +65,7 @@ signed main() {
             }
         }
 
-        if (line && !block) ans++;
+        if (line) ans++;
     }
 
     cout << ans << endl;
